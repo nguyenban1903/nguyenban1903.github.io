@@ -222,14 +222,14 @@ body {
     /* position : absolute; */
     text-align: center;
     font-size: 1.7em;
-    bottom: 30%;
+    bottom: 22em;
   }
   .date-lunar {
     font-size: 2rem;
     font-weight: 600;
   }
   .musics {
-    bottom: 62em;
+    bottom: 65em;
     right: 2em;
   }
   .musics > i {
