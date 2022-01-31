@@ -1,0 +1,240 @@
+:root {
+  --txt-color: #fff;
+  --timer-box-bg: #db3c74;
+  --timer-box-txt-bg: #203887;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  user-select: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  color: var(--txt-color);
+  overflow: hidden;
+}
+
+.firework-container {
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: right;
+  background-size: contain;
+  background-repeat: repeat;
+}
+
+.content-wrapper {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: -80px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.newyear {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 27px
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time > * ~ * {
+  margin-left: 4rem;
+}
+
+.time-box {
+  background-color: var(--timer-box-bg);
+  border-radius: 8px;
+}
+
+.time-box__count {
+  width: 9rem;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-box__count > span {
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+.time-box__text {
+  background-color: var(--timer-box-txt-bg);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.current-date {
+  position: absolute;
+  bottom: 25px;
+}
+
+.date-positive {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.date-lunar {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.musics {
+  position: absolute;
+  bottom: 26px;
+  right: 24px;
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}
+.musics > i {
+  font-size: 2.4rem;
+  opacity: 0.7;
+}
+
+@keyframes rotateBtn {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+  .content-wrapper{
+    left: 0;
+  }
+  .header {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  .newyear {
+    margin-bottom: 1.5em;
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 2;
+  }
+  .time{
+    bottom: 8em;
+  }
+  .time-box{
+    height:12em;
+  }
+  .time-box__count{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .current-date {
+    bottom: 8em;
+  }
+  .date-positive {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .date-lunar {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .musics {
+    bottom: 10em;
+    right: 1em;
+  }
+  .musics > i {
+    font-size: 3.6rem;
+    opacity: 0.7;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 35%;
+  }
+  .content-wrapper{
+    left: 0;
+    margin: 0;
+    padding: auto;
+  }
+  .header {
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .newyear {
+    margin-bottom: 2em;
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .time{
+    padding-bottom: 7em;
+  }
+  .time-box__count{
+    height: 6.5em;
+  }
+  .date-positive {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .current-date {
+    /* position : absolute; */
+    text-align: center;
+    font-size: 1.7em;
+    bottom: 22em;
+  }
+  .date-lunar {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .musics {
+    bottom: 62em;
+    right: 2em;
+  }
+  .musics > i {
+    font-size: 4.8rem;
+    opacity: 0.7;
+  }
+
+}
