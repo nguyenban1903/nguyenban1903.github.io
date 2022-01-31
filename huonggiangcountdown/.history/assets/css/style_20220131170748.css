@@ -208,11 +208,10 @@ body {
     text-align: center;
   }
   .time{
-    padding-bottom: 5em;
+    padding-bottom: 7em;
   }
   .time-box__count{
     height: 6.5em;
-    width: 6.5em;
   }
   .date-positive {
     font-size: 2rem;
